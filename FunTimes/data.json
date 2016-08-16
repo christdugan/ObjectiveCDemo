@@ -1,0 +1,10 @@
+{
+    "data":{
+            "legendaries": [
+                            { "title":"Al'Akir", "rating":"4", "fullImage":"al'akir.png", "thumbImage":"al'akir.png"},
+                            { "title":"Harrison Jones", "rating":"3", "fullImage":"harrison.png", "thumbImage":"harrison.png"},
+                            { "title":"Leeroy Jenkins", "rating":"5", "fullImage":"leeroy.png", "thumbImage":"leeroy.png"},
+                            { "title":"Nozdormu", "rating":"1", "fullImage":"nozdormu.png", "thumbImage":"nozdormu.png"},
+                            ]
+            }
+}

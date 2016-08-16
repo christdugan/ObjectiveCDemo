@@ -7,15 +7,22 @@
 //
 
 #import "AppDelegate.h"
+#import "MasterViewController.h"
+#import "LegendaryDoc.h"
+#import "DataLoader.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    
+    UINavigationController *navController = (UINavigationController *) self.window.rootViewController;
+    MasterViewController *masterController = [navController.viewControllers objectAtIndex:0];
+    
+    [DataLoader getJsonDataWithCompletion:^(NSMutableArray *data) {
+        masterController.legendaries = data;
+    }];
+
     return YES;
 }
 
